@@ -1,5 +1,3 @@
-import Image from "next/image";
-import Square from "./components/Square";
 import Board from "./components/Board";
 
 export default function Home() {
