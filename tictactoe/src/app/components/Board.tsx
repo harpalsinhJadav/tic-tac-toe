@@ -77,6 +77,18 @@ export default function Board() {
           <Square key={idx} value={val} onSquareClick={() => handleClick(idx)} />
         ))}
       </div>
+
+      {/* Rules Section */}
+      <div className="mt-6 p-4 border border-gray-400 rounded-lg w-72 bg-gray-50">
+        <h2 className="font-semibold text-center mb-2">Game Rules</h2>
+        <ul className="list-disc list-inside text-sm space-y-1">
+          <li>Players take turns placing <strong>X</strong> and <strong>O</strong>.</li>
+          <li>The first player to align 3 marks in a row wins.</li>
+          <li>Each player can only have <strong>3 marks</strong> on the board.</li>
+          <li>If a 4th mark is placed without winning, the oldest mark is removed.</li>
+          <li>If the 3rd mark creates a winning line, the player wins immediately.</li>
+        </ul>
+      </div>
     </div>
   );
 }
