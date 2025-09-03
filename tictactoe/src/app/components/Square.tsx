@@ -1,10 +1,14 @@
+"use client";
 
-export default function Square({value, onSquareClick}: {value:string| null; onSquareClick: any}) {
+import { SquareProps } from "@/types/types";
 
+export default function Square({ value, onClick }: SquareProps) {
   return (
     <button
-      className="aspect-square border border-black flex items-center justify-center text-2xl"
-    onClick={onSquareClick}>{value}</button>
-    
-);
+      onClick={onClick}
+      className="aspect-square border border-black flex items-center justify-center text-xl"
+    >
+      {value}
+    </button>
+  );
 }
